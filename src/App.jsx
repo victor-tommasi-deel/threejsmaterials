@@ -20,7 +20,7 @@ class App extends React.Component {
     // const objects = createGeometry(5, 5, 5, 0xc9b92b, 0xff0040);
     const objects = createNormalGeometry();
     const start = init(objects);
-    const viewer = document.getElementById('viewer');
+    const { viewer } = this.refs;
     viewer.appendChild(start.renderer.domElement);
     const { renderer, scene, camera } = start;
     const { geometricFigure } = objects;
